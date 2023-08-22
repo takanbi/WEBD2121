@@ -1,1 +1,43 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  background: pink;
+  width: 100vw;
+  height: 100vh;
+  transition: background-color 4s;
+}
+
+@media screen and (max-width: 320px) {
+  #container {
+    background: #F9F61E;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  #container {
+    background: #F2C729;
+  }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  #container {
+    background: #F99D1E;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  #container {
+    background: #F44900;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #container {
+    background: #FA0F0D;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #container {
+    background: #D80DFA;
+  }
+}/*# sourceMappingURL=style.css.map */
