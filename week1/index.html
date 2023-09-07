@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBD2121-week1</title>
+    <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+
+</script>
+</head>
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+<!-- <dotlottie-player src="./animation_lm9datol.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop controls autoplay>
+</dotlottie-player> -->
+<dotlottie-player src="./animation_lm9datol.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" id="hamburger">
+</dotlottie-player>
+<body onLoad="MM_preloadImages('images-jpg/demo001.jpg')">
+    <div id="container">
+        <section>
+	    <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images-jpg/demo001.jpg',1)"><img src="images-jpg/demo001-bw.jpg" alt="" width="384" height="384" id="Image1"></a> 
+		
+		<img src="images-jpg/demo002-bw.jpg" id="img2">
+		</section>
+    </div>
+    <script src="js/script.js"></script>
+	
+	
+	<script>
+		let img2 = document.getElementById("img2");
+		img2.addEventListener("mouseover", ()=> {
+			img2.setAttribute("src", "images-jpg/demo002.jpg");
+		});
+				img2.addEventListener("mouseleave", ()=> {
+			img2.setAttribute("src", "images-jpg/demo002-bw.jpg");
+		});
+		let hamburger = document.getElementById("hamburger");
+		hamburger.addEventListener("mouseenter", ()=> {
+			hamburger.setAttribute("autoplay");
+		})
+	</script>
+</body>
+</html>
