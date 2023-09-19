@@ -1,0 +1,53 @@
+#container nav {
+  background-color: black;
+  height: 100px;
+  width: 100%;
+  display: flex;
+}
+#container nav #logo {
+  width: 100px;
+  height: 100px;
+  margin-left: 5.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container nav #logo div {
+  width: 80%;
+  height: 80%;
+}
+#container nav #logo div img {
+  width: 100%;
+}
+#container nav ul {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: 4.5em;
+  display: flex;
+  align-items: center;
+}
+#container nav ul li {
+  margin: 0 1em;
+}
+#container nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Phudu", cursive;
+  letter-spacing: 2px;
+}
+#container section {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-gap: 1em;
+}
+#container section div img {
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 550px) {
+  #container section {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
