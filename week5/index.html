@@ -50,6 +50,14 @@
 <body>
 
   <!-- Add your site or application content here -->
+  <div id="nav-display">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+  </div>
   <div id="container">
     <nav>
       <div id="logo">
@@ -57,39 +65,52 @@
           <img src="favicomatic/mstile-310x310.png" alt="logo">
         </div>
       </div>
-      <ul>
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
-      </ul>
+      </ul> -->
     </nav>
-    <section>
-      <div><img src="img/sneakers/men/001.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/002.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/003.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/004.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/005.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/006.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/007.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/008.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/009.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/010.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/011.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/012.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/013.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/014.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/015.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/016.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/017.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/018.png" alt="#" /></div>
-      <div><img src="img/sneakers/men/019.png" alt="#" /></div>
-      <div><img src="img/sneakers/women/007.png" alt="#" /></div>
-
+    <header>
+      <section>
+      <h1>Furge Sneakers</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam et provident, alias nostrum, libero labore, veritatis vero quos cumque sequi sapiente repellat! Porro atque dolores saepe animi facere, voluptas amet.</p>
     </section>
+    </header>
+    
   </div>
+  <section id="products">
+    <div><img src="img/sneakers/men/001.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/002.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/003.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/004.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/005.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/006.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/007.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/008.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/009.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/010.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/011.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/012.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/013.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/014.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/015.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/016.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/017.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/018.png" alt="#" /></div>
+    <div><img src="img/sneakers/men/019.png" alt="#" /></div>
+    <div><img src="img/sneakers/women/007.png" alt="#" /></div>
+  </section> 
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
@@ -105,6 +126,25 @@
     ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script>
+    // let hamburger = document.getElementById("hamburger");
+    // 
+    // hamburger.addEventListener("click", ()=> {
+    //   document.getElementById("nav-display").style.visibility = "visible";
+    // })
+    $(function(){
+      let hamburger = $("#hamburger");
+      let navDisplay = $("#nav-display");
+      hamburger.click(()=> {
+        navDisplay.toggle(showNavDisplay());
+        // ;
+      })
+      function showNavDisplay() {
+        // navDisplay.toggle();
+        gsap.from(navDisplay,{y:-800 , autoAlpha: 0, duration: 0.25});
+      }
+    })
+  </script>
 </body>
 
 </html>
