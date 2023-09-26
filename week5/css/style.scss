@@ -12,7 +12,7 @@ $roboto: "Roboto", sans-serif;
   left: 0;
   width: 100%;
   height: calc(100vh - (70px + 2em));
-  background-color: rgba(0,0,0,0.93);
+  background-color: rgba(0, 0, 0, 0.93);
   z-index: 99;
   display: none;
   ul {
@@ -35,75 +35,89 @@ $roboto: "Roboto", sans-serif;
       a:hover {
         color: red;
         border-bottom: 2px solid red;
-
       }
     }
   }
 }
 #container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-image: url("../img/sneakers/men/007-Dark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 100px;
-    overflow:hidden;
-    nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background-image: url("../img/sneakers/men/007-Dark.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 100px;
+  overflow: hidden;
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    #logo {
+      div {
+        img {
+          width: 70px;
+          height: auto;
+          border-radius: 0.25em;
+        }
+      }
+    }
+    #hamburger {
+      width: 50px;
+      height: 50px;
+      // background-color: red;
       display: flex;
-      align-items: center;
-      padding: 1em;
-      #logo {
-        div {
-          img {
-            width: 70px;
-            height: auto;
-            border-radius: 0.25em;
-          }
-        }
-      }
-      #hamburger {
-        width: 50px;
-        height: 50px;
-        // background-color: red;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: auto;
-        cursor: pointer;
-        span {
-          width: 100%;
-          height: 5px;
-          background-color: white;
-          display: block;
-        }
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-left: auto;
+      cursor: pointer;
+      span {
+        width: 100%;
+        height: 5px;
+        background-color: white;
+        display: block;
       }
     }
+  }
+  header {
+    width: 100%;
+    color: white;
+    section {
+      padding: 1.5em;
+      // position: relative;
+      // top: 150px;
+      h1 {
+        text-align: center;
+        font-family: $anton;
+        letter-spacing: 0.15em;
+        border-bottom: 2px solid white;
+      }
+      p {
+        font-family: $phudu;
+        line-height: 2em;
+        padding: 0 1em;
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
     header {
-      width: 100%;
-      color: white;
+      width: 50%;
+      margin: 0 auto;
       section {
-        padding: 1.5em;
-        position: relative;
-        top: 150px;
         h1 {
-          text-align: center;
-          font-family: $anton;
-          letter-spacing: 0.15em;
-          border-bottom: 2px solid white;
-        }
-        p {
-          font-family: $phudu;
-          line-height: 2em;
-          padding: 0 1em;
+          font-size: 2.75em;
         }
       }
     }
-
-
+  }
+}
+@media screen and (min-width: 768px) {
+  #container {
+    background-position: 50% 120%;
+    background-size: contain;
+  }
 }
 #products {
   width: 100%;
@@ -116,5 +130,12 @@ $roboto: "Roboto", sans-serif;
     img {
       width: 100%;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  #products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
   }
 }
