@@ -1,0 +1,66 @@
+$anton: "Anton", sans-serif;
+$phudu: "Phudu", cursive;
+$roboto: "Roboto", sans-serif;
+$transitions: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  nav {
+    width: 24em;
+    height: 640px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    ul {
+      position: absolute;
+      li {
+        font-family: $anton;
+        font-size: 3em;
+        position: relative;
+        color: red;
+        list-style: none;
+        cursor: pointer;
+        padding: 0.5em 0;
+        a {
+          color: inherit;
+          text-decoration: none;
+          display: block;
+          transition: $transitions;
+          &::before {
+            content: "";
+            height: 4px;
+            background-color: red;
+            width: 0%;
+            position: absolute;
+            bottom: 0;
+            display: block;
+            transition: $transitions;
+          }
+        }
+      }
+      li:hover {
+        a {
+          transform: scale(1.25);
+          color: black;
+          &::before {
+            width: 100%;
+            background-color: black;
+          }
+        }
+
+      }
+    }
+  }
+}

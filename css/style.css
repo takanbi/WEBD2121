@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container nav {
+  width: 24em;
+  height: 640px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+}
+#container nav ul {
+  position: absolute;
+}
+#container nav ul li {
+  font-family: "Anton", sans-serif;
+  font-size: 3em;
+  position: relative;
+  color: red;
+  list-style: none;
+  cursor: pointer;
+  padding: 0.5em 0;
+}
+#container nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#container nav ul li a::before {
+  content: "";
+  height: 4px;
+  background-color: red;
+  width: 0%;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#container nav ul li:hover a {
+  transform: scale(1.25);
+  color: black;
+}
+#container nav ul li:hover a::before {
+  width: 100%;
+  background-color: black;
+}/*# sourceMappingURL=style.css.map */
