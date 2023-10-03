@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+$white: #fff;
+$veryLightBlue: #f1f9ff;
+$lightBlue: #bce0fd;
+$regularBlue: #2699fb;
+$lightGrey: #d6d6d6;
+$mediumGrey: #7f7f7f;
+
+$Arial: Arial, Helvetica, sans-serif;
+$Georgia: Georgia, "Times New Roman", Times, serif;
+
+#container {
+  width: 100%;
+  background-color: $white;
+  nav {
+    height: 80px;
+    background-color: $regularBlue;
+    display: flex;
+    padding: 0 3em;
+    align-items: center;
+    color: $white;
+    font-family: $Arial;
+    ul {
+      display: flex;
+      margin-left: auto;
+      list-style-type: none;
+      li {
+        padding: 0.5em;
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+      #signup {
+        border: 1px solid $white;
+        padding: 0.5em 1em;
+        margin-left: 1em;
+        border-radius: 0.5em;
+      }
+    }
+  }
+
+  #section2 {
+    width: 100%;
+    margin: 0 auto;
+    
+    #section2-child {
+        height: calc(100vh - 80px);
+        padding: 2em;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        #section-left {
+            background-color: $veryLightBlue;
+            padding: 2.5em;
+            h1 {
+                font-family: $Georgia;
+                font-weight: 100;
+                color: $regularBlue;
+                font-size: 1.2em;
+                margin-bottom: 1em;
+            }
+            p {
+                font-family: $Arial;
+                font-size: 0.6em;
+                line-height: 1.5em;
+                color: $regularBlue;
+            }
+        }
+        #section-right {
+            background-color: $mediumGrey;
+            display: grid;
+            // grid-template-columns: 1fr 1fr 1fr;
+            // grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+            "one two two"
+            "three four five"
+            "three six seven"
+            ;
+            grid-gap: 0px 0px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+            #img-1 {
+                grid-area: one;
+            }
+            #img-2 {
+                grid-area: two;
+            }
+            #img-3 {
+                grid-area: three;
+            }
+            #img-4 {
+                grid-area: four;
+            }
+            #img-5 {
+                grid-area: five;
+            }
+            #img-6 {
+                grid-area: six;
+            }
+            #img-7 {
+                grid-area: seven;
+            }
+        }
+    }
+  } 
+}
