@@ -9,42 +9,84 @@
   background-color: #fff;
 }
 #container nav {
-  height: 80px;
-  background-color: #2699fb;
+  width: 100%;
   display: flex;
-  padding: 0 3em;
   align-items: center;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #2699fb;
+  height: 80px;
+  padding: 1em;
+}
+#container nav #brand h1 {
+  font-size: 1.5em;
+}
+#container nav #brand h1 #xd {
+  display: block;
+}
+#container nav #menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 50px;
+  margin-left: auto;
+}
+#container nav #menu span {
+  height: 5px;
+  background: #fff;
+  width: 100%;
+  display: inline-block;
 }
 #container nav ul {
-  display: flex;
-  margin-left: auto;
-  list-style-type: none;
-}
-#container nav ul li {
-  padding: 0.5em;
+  visibility: hidden;
+  display: none;
 }
 #container nav ul li a {
   text-decoration: none;
   color: #fff;
 }
-#container nav ul #signup {
-  border: 1px solid #fff;
-  padding: 0.5em 1em;
+#container #section1 {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1em;
+}
+#container #section1 div {
+  width: 100%;
+}
+#container #section1 #section1-div1 {
+  display: flex;
+  justify-content: center;
+}
+#container #section1 #section1-div1 img {
   margin-left: 1em;
+  width: 100%;
+}
+#container #section1 #section1-div2 {
+  margin-bottom: 1.5em;
+}
+#container #section1 #section1-div2 h6 {
+  color: #7f7f7f;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 1em 0 1em 0;
+}
+#container #section1 #section1-div2 h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  color: #2699fb;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+#container #section1 #section1-div2 button {
+  background: none;
+  color: #2699fb;
+  border: 1px solid #bce0fd;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1em 2em;
   border-radius: 0.5em;
 }
-#container #section2 {
-  width: 100%;
-  margin: 0 auto;
-  padding: 2em;
-}
-#container #section2 #section2-child {
-  display: flex;
-}
 #container #section2 #section2-child #section-left {
-  width: 40%;
   background-color: #f1f9ff;
   padding: 2.5em;
 }
@@ -52,50 +94,19 @@
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 100;
   color: #2699fb;
-  font-size: 1.2em;
+  font-size: 2.5em;
   margin-bottom: 1em;
 }
 #container #section2 #section2-child #section-left p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.6em;
-  line-height: 1.5em;
+  line-height: 2em;
   color: #2699fb;
 }
 #container #section2 #section2-child #section-right {
-  width: 50%;
-  height: 50%;
-  max-height: calc(100vh - 80px - 4em);
-  max-height: calc(100vh - 144px);
-  overflow: hidden;
-  background-color: #7f7f7f;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "one two two" "three four five" "three six seven";
-  grid-gap: 0px 0px;
+  display: flex;
+  flex-direction: column;
 }
 #container #section2 #section2-child #section-right img {
-  width: 100%;
-  height: auto;
-}
-#container #section2 #section2-child #section-right #img-1 {
-  grid-area: one;
-}
-#container #section2 #section2-child #section-right #img-2 {
-  grid-area: two;
-}
-#container #section2 #section2-child #section-right #img-3 {
-  grid-area: three;
-}
-#container #section2 #section2-child #section-right #img-4 {
-  grid-area: four;
-}
-#container #section2 #section2-child #section-right #img-5 {
-  grid-area: five;
-}
-#container #section2 #section2-child #section-right #img-6 {
-  grid-area: six;
-}
-#container #section2 #section2-child #section-right #img-7 {
-  grid-area: seven;
+  padding: 0.5em 1em;
 }/*# sourceMappingURL=style.css.map */

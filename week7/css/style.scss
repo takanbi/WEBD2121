@@ -9,113 +9,210 @@ $lightBlue: #bce0fd;
 $regularBlue: #2699fb;
 $lightGrey: #d6d6d6;
 $mediumGrey: #7f7f7f;
-
 $Arial: Arial, Helvetica, sans-serif;
 $Georgia: Georgia, "Times New Roman", Times, serif;
-
+//regular css and mobile setup
 #container {
   width: 100%;
   background-color: $white;
   nav {
-    height: 80px;
-    background-color: $regularBlue;
+    width: 100%;
     display: flex;
-    padding: 0 3em;
     align-items: center;
     color: $white;
     font-family: $Arial;
-    ul {
+    background-color: $regularBlue;
+    height: 80px;
+    padding: 1em;
+    #brand {
+      h1 {
+        font-size: 1.5em;
+        #xd {
+          display: block;
+        }
+      }
+    }
+    #menu {
       display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      width: 50px;
       margin-left: auto;
-      list-style-type: none;
+      span {
+        height: 5px;
+        background: $white;
+        width: 100%;
+        display: inline-block;
+      }
+    }
+
+    ul {
+      visibility: hidden;
+      display: none;
       li {
-        padding: 0.5em;
         a {
           text-decoration: none;
           color: $white;
         }
       }
-      #signup {
-        border: 1px solid $white;
-        padding: 0.5em 1em;
+    }
+  }
+  #section1 {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1em;
+    div {
+      width: 100%;
+    }
+    #section1-div1 {
+      display: flex;
+      justify-content: center;
+      img {
         margin-left: 1em;
-        border-radius: 0.5em;
+        width: 100%;
+      }
+    }
+    #section1-div2 {
+      margin-bottom: 1.5em;
+      h6 {
+        color: $mediumGrey;
+        font-family: $Arial;    
+        font-size: 1em;
+        margin: 1em 0 1em 0;
+      }
+      h1 {
+        font-family: $Georgia;
+        font-weight: 100;
+        color: $regularBlue;
+        font-size: 2.5em;
+        margin-bottom: 1em;  
+      }
+      button {
+        background: none;
+        color:$regularBlue;
+        border: 1px solid $lightBlue;
+        font-family: $Arial;
+        padding: 1em 2em;
+        border-radius: 0.5em; 
       }
     }
   }
-
   #section2 {
-    width: 100%;
-    margin: 0 auto;
-    padding: 2em;
     #section2-child {
-        // height: calc(100vh - 80px);
-        // padding: 2em;
+      #section-left {
+        background-color: $veryLightBlue;
+        padding: 2.5em;
+        h1 {
+          font-family: $Georgia;
+          font-weight: 100;
+          color: $regularBlue;
+          font-size: 2.5em;
+          margin-bottom: 1em;
+        }
+        p {
+          font-family: $Arial;
+          font-size: 0.6em;
+          line-height: 2em;
+          color: $regularBlue;
+        }
+      }
+      #section-right {
+        // background-color: $mediumGrey;
         display: flex;
-        // display: grid;
-        // grid-template-columns: 1fr 2fr;
-        #section-left {
-          width: 40%;
-            background-color: $veryLightBlue;
-            padding: 2.5em;
-            h1 {
-                font-family: $Georgia;
-                font-weight: 100;
-                color: $regularBlue;
-                font-size: 1.2em;
-                margin-bottom: 1em;
-            }
-            p {
-                font-family: $Arial;
-                font-size: 0.6em;
-                line-height: 1.5em;
-                color: $regularBlue;
-            }
+        flex-direction: column;
+        img {
+          padding: 0.5em 1em;
         }
-        #section-right {
-          width: 50%;
-          height: 50%;
-          max-height: calc(100vh - 80px - 4em);
-          max-height: calc(100vh - 144px);
-          overflow: hidden;
-            background-color: $mediumGrey;
-            display: grid;
-            // grid-template-columns: 1fr 1fr 1fr;
-            // grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-areas: 
-            "one two two"
-            "three four five"
-            "three six seven"
-            ;
-            grid-gap: 0px 0px;
-            img {
-                width: 100%;
-                height: auto;
-            }
-            #img-1 {
-                grid-area: one;
-            }
-            #img-2 {
-                grid-area: two;
-            }
-            #img-3 {
-                grid-area: three;
-            }
-            #img-4 {
-                grid-area: four;
-            }
-            #img-5 {
-                grid-area: five;
-            }
-            #img-6 {
-                grid-area: six;
-            }
-            #img-7 {
-                grid-area: seven;
-            }
-        }
+      }
     }
-  } 
+  }
 }
+// media query for 852px min-width starts here
+// @media screen and (min-width: 852px) {
+//   #container {
+//     nav {
+//       display: flex;
+//       padding: 0 3em;
+//       align-items: center;
+//       ul {
+//         display: flex;
+//         margin-left: auto;
+//         list-style-type: none;
+//         li {
+//           padding: 0.5em;
+//         }
+//         #signup {
+//           border: 1px solid $white;
+//           padding: 0.5em 1em;
+//           margin-left: 1em;
+//           border-radius: 0.5em;
+//         }
+//       }
+//     }
+//     #section1 {
+//       flex-direction: row;
+//       div {
+//         width: 50%;
+//       }
+//       #section1-div1 {
+//         img {
+//           width: 100%;
+//           height: auto;
+//         }
+//       }
+//     }
+//     #section2 {
+//       width: 100%;
+//       margin: 0 auto;
+//       padding: 2em;
+//       #section2-child {
+//         display: flex;
+//         #section-left {
+//           width: 40%;
+//         }
+//         #section-right {
+//           width: 60%;
+//           height: 60%;
+//           max-height: calc(100vh - 80px - 4em);
+//           max-height: calc(100vh - 144px);
+//           overflow: hidden;
+//           display: grid;
+//           grid-template-columns: repeat(3, 1fr);
+//           grid-template-rows: repeat(3, 1fr);
+//           grid-template-areas:
+//             "one two two"
+//             "three four five"
+//             "three six seven";
+//           grid-gap: 0px 0px;
+//           img {
+//             width: 100%;
+//             height: auto;
+//           }
+//           #img-1 {
+//             grid-area: one;
+//           }
+//           #img-2 {
+//             grid-area: two;
+//           }
+//           #img-3 {
+//             grid-area: three;
+//           }
+//           #img-4 {
+//             grid-area: four;
+//           }
+//           #img-5 {
+//             grid-area: five;
+//           }
+//           #img-6 {
+//             grid-area: six;
+//           }
+//           #img-7 {
+//             grid-area: seven;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// media query for 852px min-width ends here
