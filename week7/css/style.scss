@@ -176,12 +176,12 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
     margin-top: 2em;
     // height: 600px;
     width: 100%;
-    background-color: $lightBlue;
+    background-color: $veryLightBlue;
     display: flex;
     justify-content: center;
     align-items: center;
-    div {
-      margin-top: 2em;
+    #section-4-div {
+      margin: 1.5em 0;
       width: 90%;
       height: 90%;
       background-color: $white;
@@ -215,6 +215,7 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
           display: flex;
           align-items: center;
           padding: 2em;
+          border-radius: 0.5em;
           #price {
             display: flex;
             flex-direction: column;
@@ -223,10 +224,13 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
             span {
               color: $regularBlue;
               font-family: $Arial;
+            }
+            span {
               font-size: 0.8em;
             }
           }
           div.plus {
+            background-color: $white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -237,7 +241,69 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
             margin: 0;
             margin-left: auto;
             color: $regularBlue;
+            font-weight: bold;
           }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: $regularBlue;
+    h3, p {
+      font-family: $Arial;
+      color: $white;
+
+    }
+    h3 {
+      padding: 0.5em 1em 0 1em;
+    }
+    p {
+      text-align: center;
+      padding: 0.5em 1em;
+    }
+    form {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      border: 1px solid $white;
+      width: 70%;
+      margin: 0 auto;
+      border-radius: 0.5em;
+      overflow: hidden;
+      input, button {
+        padding-block: 0;
+        padding-inline: 0;
+        border: none;
+        font-family: $Arial;
+        padding: 1em;
+      }
+      input {
+        color: $white;
+        background-color: inherit;
+      }
+      input::placeholder {
+        opacity: 1;
+        color: $white;
+      }
+      button {
+        color: $regularBlue;
+        background-color: $white;
+      }
+    }
+    #footer-nav {
+      padding: 1em;
+      font-family: $Arial;
+      color: $white;
+      // font-size: 12px;
+      ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 60% 10% 30%;
+        grid-template-rows: repeat(3, 1fr);
+        // .social {
+        //   // margin-left: 1em;
+        // }
+        li {
+          padding: 0.25em;
         }
       }
     }
