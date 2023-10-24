@@ -16,6 +16,8 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
   width: 100%;
   background-color: $white;
   nav {
+    // position: relative;
+    // z-index: 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -33,12 +35,16 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
       }
     }
     #menu {
+      // position: relative;
+      // z-index: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       height: 100%;
+      height: 48px;
       width: 50px;
       margin-left: auto;
+      cursor: pointer;
       span {
         height: 5px;
         background: $white;
@@ -47,10 +53,16 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
       }
     }
 
-    ul {
-      visibility: hidden;
+    ul#navigation {
+      // position: relative;
+      // z-index: 99;
+      height: 100vh;
+      width: 100%;
+      background-color: black;
+      // visibility: hidden;
       display: none;
       li {
+        display: block;
         a {
           text-decoration: none;
           color: $white;
@@ -258,8 +270,9 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
       padding: 0.5em 1em 0 1em;
     }
     p {
-      text-align: center;
-      padding: 0.5em 1em;
+      text-align: left; 
+      padding: 1.5em; 
+      line-height:1.5em;
     }
     form {
       display: grid;
@@ -310,90 +323,145 @@ $Georgia: Georgia, "Times New Roman", Times, serif;
   }
 }
 // media query for 852px min-width starts here
-// @media screen and (min-width: 852px) {
-//   #container {
-//     nav {
-//       display: flex;
-//       padding: 0 3em;
-//       align-items: center;
-//       ul {
-//         display: flex;
-//         margin-left: auto;
-//         list-style-type: none;
-//         li {
-//           padding: 0.5em;
-//         }
-//         #signup {
-//           border: 1px solid $white;
-//           padding: 0.5em 1em;
-//           margin-left: 1em;
-//           border-radius: 0.5em;
-//         }
-//       }
-//     }
-//     #section1 {
-//       flex-direction: row;
-//       div {
-//         width: 50%;
-//       }
-//       #section1-div1 {
-//         img {
-//           width: 100%;
-//           height: auto;
-//         }
-//       }
-//     }
-//     #section2 {
-//       width: 100%;
-//       margin: 0 auto;
-//       padding: 2em;
-//       #section2-child {
-//         display: flex;
-//         #section-left {
-//           width: 40%;
-//         }
-//         #section-right {
-//           width: 60%;
-//           height: 60%;
-//           max-height: calc(100vh - 80px - 4em);
-//           max-height: calc(100vh - 144px);
-//           overflow: hidden;
-//           display: grid;
-//           grid-template-columns: repeat(3, 1fr);
-//           grid-template-rows: repeat(3, 1fr);
-//           grid-template-areas:
-//             "one two two"
-//             "three four five"
-//             "three six seven";
-//           grid-gap: 0px 0px;
-//           img {
-//             width: 100%;
-//             height: auto;
-//           }
-//           #img-1 {
-//             grid-area: one;
-//           }
-//           #img-2 {
-//             grid-area: two;
-//           }
-//           #img-3 {
-//             grid-area: three;
-//           }
-//           #img-4 {
-//             grid-area: four;
-//           }
-//           #img-5 {
-//             grid-area: five;
-//           }
-//           #img-6 {
-//             grid-area: six;
-//           }
-//           #img-7 {
-//             grid-area: seven;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@media screen and (min-width: 852px) {
+  #container {
+    nav {
+      display: flex;
+      padding: 0 3em;
+      align-items: center;
+      ul {
+        display: flex;
+        margin-left: auto;
+        list-style-type: none;
+        li {
+          padding: 0.5em;
+        }
+        #signup {
+          border: 1px solid $white;
+          padding: 0.5em 1em;
+          margin-left: 1em;
+          border-radius: 0.5em;
+        }
+      }
+    }
+    #section1 {
+      margin-top: 2em;
+      // flex-direction: column-reverse;
+      align-items: center;
+      div {
+        width: 70%;
+      }
+      #section1-div1 {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    #section2 {
+      width: 100%;
+      margin: 0 auto;
+      // padding: 2em;
+      #section2-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        #section-left {
+          width: 100%;
+          padding: 4em;
+          div {
+            width: 80%;
+            margin: 0 auto;
+            p {
+              font-size: 0.8em;
+            }
+          }
+        
+        }
+        #section-right {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas:
+            "one two two"
+            "three four five"
+            "three six seven";
+          grid-gap: 0px 0px;
+          img {
+            width: 100%;
+            height: auto;
+            padding:0;
+          }
+          #img-1 {
+            grid-area: one;
+          }
+          #img-2 {
+            grid-area: two;
+          }
+          #img-3 {
+            grid-area: three;
+          }
+          #img-4 {
+            grid-area: four;
+          }
+          #img-5 {
+            grid-area: five;
+          }
+          #img-6 {
+            grid-area: six;
+          }
+          #img-7 {
+            grid-area: seven;
+          }
+        }
+      }
+    }
+    #cards {
+      padding: 2em;
+      margin-top: 1em;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      column-gap: 3em;
+      .section3 {
+        margin: 1em 0;
+      }
+    }
+    #section-4 {
+      #section-4-div {
+        p {
+          width: 40%;
+          margin-bottom: 3em;
+        }
+        #div-boxes {
+          display: flex;
+          // justify-content: space-around;
+          .boxes {
+            // width: 33.33%;
+            margin: 0.5em;
+
+          }
+        }
+      }
+    }
+    footer {
+      section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em;
+        #footer-nav {
+          width: 76%;
+        }
+        #address {
+          padding: 0;
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
 // media query for 852px min-width ends here
