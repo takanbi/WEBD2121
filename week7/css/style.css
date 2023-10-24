@@ -43,11 +43,7 @@
 #container nav ul#navigation {
   height: 100vh;
   width: 100%;
-  background-color: black;
   display: none;
-}
-#container nav ul#navigation li {
-  display: block;
 }
 #container nav ul#navigation li a {
   text-decoration: none;
