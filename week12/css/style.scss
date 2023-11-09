@@ -13,9 +13,9 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-#wrapper-container {
+// #wrapper-container {
 
-}
+// }
 #content {
     margin-top: 56px;
   height: calc(100vh - 56px);
