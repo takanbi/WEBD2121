@@ -1,21 +1,42 @@
 $primary: #f5df4d;
-$secondary: rgb(147,149,151);
-$light: rgb(172,163,202);
+$secondary: rgb(147, 149, 151);
+$light: rgb(172, 163, 202);
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
 $custom-theme-colors: (
-    "tunjiLight": #00FFFF,
-    "tunjiDark": #B34000
+  "tunjiLight": #00ffff,
+  "tunjiDark": #b34000,
 );
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 #wrapper-container {
-    height: 100vh;
-    // #nav {
-    //     height: 70px;
-    // }
+
+}
+#content {
+    margin-top: 56px;
+  height: calc(100vh - 56px);
+
+  width: 100%;
+  padding: 0;
+  #content-1 {
+    height: 500px;
+    background-color: #f5df4d;
+    .row { 
+        height: 100%;
+        .content-1-section {
+            // background-color: blue;
+            height: 100%;
+            .content-1-section-div {
+                height: 90%;
+                width: 90%;
+
+               background-color:#000;
+            }
+        }
+    }
+  }
 }
