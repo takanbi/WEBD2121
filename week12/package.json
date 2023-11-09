@@ -1,0 +1,26 @@
+{
+  "name": "custom-bootstrap",
+  "version": "1.0.0",
+  "description": "custom bootstarp starter project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takanbi/custom-bootstrap.git"
+  },
+  "keywords": [
+    "boostrap"
+  ],
+  "author": "Tunji Akanbi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/takanbi/custom-bootstrap/issues"
+  },
+  "homepage": "https://github.com/takanbi/custom-bootstrap#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}
