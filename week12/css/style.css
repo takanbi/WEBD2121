@@ -12164,24 +12164,31 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-#content {
-  margin-top: 56px;
-  height: calc(100vh - 56px);
-  width: 100%;
-  padding: 0;
+#wrapper-container #nav {
+  height: 80px;
 }
-#content #content-1 {
-  height: 500px;
-  background-color: #f5df4d;
+#wrapper-container #content1 {
+  margin-top: 80px;
+  padding-top: 2em;
 }
-#content #content-1 .row {
-  height: 100%;
+#wrapper-container #content1 img {
+  cursor: pointer;
+  transition: all 250ms linear;
+  filter: grayscale(100%) sepia(0%) contrast(50%);
 }
-#content #content-1 .row .content-1-section {
-  height: 100%;
+#wrapper-container #content1 img:hover {
+  filter: grayscale(0%) sepia(100%) contrast(100%);
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
 }
-#content #content-1 .row .content-1-section .content-1-section-div {
-  height: 90%;
-  width: 90%;
-  background-color: #000;
+#wrapper-container #content2 {
+  margin-top: 4em;
+}
+#wrapper-container #content2 img {
+  cursor: pointer;
+  transition: all 250ms linear;
+  filter: grayscale(100%) sepia(0%) contrast(50%);
+}
+#wrapper-container #content2 img:hover {
+  filter: grayscale(0%) sepia(100%) contrast(100%);
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
 }/*# sourceMappingURL=style.css.map */

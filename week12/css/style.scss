@@ -5,38 +5,46 @@ $light: rgb(172, 163, 202);
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
-$custom-theme-colors: (
-  "tunjiLight": #00ffff,
+$custom-theme-colors: ("tunjiLight": #00ffff,
   "tunjiDark": #b34000,
 );
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// #wrapper-container {
-
-// }
-#content {
-    margin-top: 56px;
-  height: calc(100vh - 56px);
-
-  width: 100%;
-  padding: 0;
-  #content-1 {
-    height: 500px;
-    background-color: #f5df4d;
-    .row { 
-        height: 100%;
-        .content-1-section {
-            // background-color: blue;
-            height: 100%;
-            .content-1-section-div {
-                height: 90%;
-                width: 90%;
-
-               background-color:#000;
-            }
-        }
-    }
+#wrapper-container {
+  #nav {
+    height: 80px;
   }
+ #content1 {
+  margin-top: 80px;
+  padding-top: 2em;
+  img {
+    cursor: pointer;
+    transition: all 250ms linear;
+    filter: grayscale(100%) sepia(0%) contrast(50%);
+  }
+  img:hover {
+    filter: grayscale(0%) sepia(100%) contrast(100%);
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.3);
+  }
+ }
+ #content2 {
+  margin-top: 4em;
+  img {
+    cursor: pointer;
+    transition: all 250ms linear;
+    filter: grayscale(100%) sepia(0%) contrast(50%);
+  }
+  img:hover {
+    filter: grayscale(0%) sepia(100%) contrast(100%);
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.3);
+  }
+ }
+ .myModal {
+  // width: 600px;
+  // height: 600px;
+  // background-color: black;
+ }
 }
+
