@@ -12191,4 +12191,12 @@ textarea.form-control-lg {
 #wrapper-container #content2 img:hover {
   filter: grayscale(0%) sepia(100%) contrast(100%);
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
+}
+
+.myModal {
+  display: flex;
+  justify-content: center;
+}
+.myModal #myModal40, .myModal #myModal30, .myModal #myModal20, .myModal #myModal10 {
+  padding: 1em;
 }/*# sourceMappingURL=style.css.map */

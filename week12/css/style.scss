@@ -41,10 +41,14 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
     box-shadow: 7px 7px 15px rgba(0,0,0,0.3);
   }
  }
- .myModal {
-  // width: 600px;
-  // height: 600px;
-  // background-color: black;
- }
+
 }
+
+.myModal {
+display: flex;
+justify-content: center; 
+ #myModal40, #myModal30, #myModal20, #myModal10 {
+   padding: 1em;
+  }
+ }
 
