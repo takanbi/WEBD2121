@@ -41,7 +41,10 @@ $theme-colors: map-merge($custom-theme-colors, $theme-colors);
     box-shadow: 7px 7px 15px rgba(0,0,0,0.3);
   }
  }
-
+#content-3 {
+  margin-top: 2em;
+  // width: 80%;
+}
 }
 
 .myModal {
@@ -51,4 +54,6 @@ justify-content: center;
    padding: 1em;
   }
  }
+
+//  $carousel-transition-duration: 0.01s;
 

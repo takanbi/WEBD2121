@@ -12192,6 +12192,9 @@ textarea.form-control-lg {
   filter: grayscale(0%) sepia(100%) contrast(100%);
   box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.3);
 }
+#wrapper-container #content-3 {
+  margin-top: 2em;
+}
 
 .myModal {
   display: flex;
