@@ -12195,11 +12195,26 @@ textarea.form-control-lg {
 #wrapper-container #content-3 {
   margin-top: 2em;
 }
+#wrapper-container #content-4 {
+  height: 100vh;
+  padding: 2em;
+}
+#wrapper-container #content-4 .accordion-button {
+  transition: all 200ms linear;
+}
+#wrapper-container #content-4 .accordion-button:not(.collapsed) {
+  color: white;
+  background-color: #000;
+  border-color: transparent;
+}
 
 .myModal {
   display: flex;
   justify-content: center;
 }
-.myModal #myModal40, .myModal #myModal30, .myModal #myModal20, .myModal #myModal10 {
+.myModal #myModal40,
+.myModal #myModal30,
+.myModal #myModal20,
+.myModal #myModal10 {
   padding: 1em;
 }/*# sourceMappingURL=style.css.map */
